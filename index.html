@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Elige prácticas de admisión LEBS o Colegios Científicos, con razonamiento verbal, matemática, imágenes y retroalimentación.">
+  <meta name="theme-color" content="#173b6c">
+  <title>Prácticas de admisión · Menú principal</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./practicas.js" defer></script>
+  <script src="./menu.js" defer></script>
+  <script src="./descarga.js?v=6" defer></script>
+<script src="./visitas.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="./index.html" aria-label="Prácticas de admisión, inicio"><span class="brand-icon" aria-hidden="true">A</span><span>Prácticas de <strong>admisión</strong></span></a><button type="button" class="download-site" id="download-button" aria-haspopup="dialog" aria-controls="download-dialog" disabled><span aria-hidden="true">↓</span> Descargar sitio (ZIP)</button></div></header>
+  <main>
+    <section class="hero" aria-labelledby="main-title"><div class="hero-inner"><p class="eyebrow">Lee · Relaciona · Aprende</p><h1 id="main-title">Cada práctica es<br>un paso adelante.</h1><p class="intro">Prepárate para el ingreso a liceos, secciones bilingües y colegios científicos. Elige una práctica, comprueba tus respuestas y aprende con cada explicación.</p><div class="hero-details"><span>✓ Corrección automática</span><span>✓ Tu avance se guarda</span><span>✓ En celular o computadora</span></div></div><div class="hero-art" aria-hidden="true"><div class="art-page"><span class="art-line"></span><span class="art-line short"></span><span class="art-choice">A</span><span class="art-choice active">B <b>✓</b></span><span class="art-choice">C</span><div class="art-note">Un intento más,<br>un aprendizaje nuevo.</div></div><span class="art-spark">✦</span></div></section>
+    <section class="catalog" aria-labelledby="catalog-title"><div class="catalog-heading"><div><p class="eyebrow">Tu próxima práctica</p><h2 id="catalog-title">Elige por dónde comenzar</h2></div><span class="count" id="practice-count"></span></div><div class="search"><label for="practice-search">Buscar una práctica</label><input id="practice-search" type="search" placeholder="Escribe un título o tema…" autocomplete="off"></div><div class="practice-grid" id="practice-list"></div><p class="empty" id="empty-message" hidden>No se encontraron prácticas con esa búsqueda.</p><p class="search-status" id="search-status" role="status" aria-live="polite"></p></section>
+    <section class="how" aria-label="Cómo practicar"><div><span>01</span><h3>Elige una práctica</h3><p>Trabaja lectura, analogías o razonamiento matemático.</p></div><div><span>02</span><h3>Comprueba tu respuesta</h3><p>Lee la explicación para entender cada elección.</p></div><div><span>03</span><h3>Revisa tu resultado</h3><p>Identifica lo que ya dominas y lo que puedes reforzar.</p></div></section>
+    <noscript><div class="noscript"><p>Activa JavaScript para realizar las prácticas.</p><a href="./practicas/ingreso-2026/index.html">Práctica de ingreso LEBS 2026</a><a href="./practicas/lebs-digital/index.html">Práctica LEBS Digital</a></div><a href="./practicas/ord-24/index.html">Práctica 3 · LEBS ORD-24</a><a href="./practicas/cientificos-2019-2020/index.html">Colegios Científicos · 2019–2020</a><a href="./practicas/cientificos-2021-2022/index.html">Colegios Científicos 2021–2022</a><a href="./practicas/cientificos-2022-2023/index.html">Colegios Científicos 2022–2023</a><a href="./practicas/cientificos-2025-2026/index.html">Colegios Científicos 2025–2026</a></noscript>
+  </main>
+  <footer class="site-footer"><span>Prácticas de admisión</span><p>Hecho por Ing. Pedro Céspedes V</p><span class="visit-counter" title="Total de sesiones de visita; una nueva sesión después de 30 minutos. No es un recuento de personas únicas.">Visitas totales: <strong data-visit-total aria-live="polite">…</strong></span></footer>
+  <dialog class="download-dialog" id="download-dialog" aria-labelledby="download-title" aria-describedby="download-description">
+    <form id="download-form">
+      <p class="eyebrow">Descarga del sitio</p>
+      <h2 id="download-title">Ingresa el PIN</h2>
+      <p id="download-description">Escribe el PIN para habilitar la descarga del sitio completo.</p>
+      <label for="download-pin">PIN de acceso</label>
+      <input id="download-pin" name="pin" type="password" inputmode="numeric" pattern="[0-9]{5}" minlength="5" maxlength="5" autocomplete="off" required aria-describedby="download-error" placeholder="•••••">
+      <p id="download-error" class="download-error" role="alert"></p>
+      <div class="download-actions"><button id="download-cancel" type="button" class="cancel-download">Cancelar</button><button type="submit" class="confirm-download">Validar PIN</button></div>
+    </form>
+    <section id="download-ready" class="download-ready" hidden aria-label="Descarga habilitada">
+      <p class="download-success" role="status">PIN correcto. Tu descarga está lista.</p>
+      <p>El ZIP incluye las siete prácticas, imágenes y PDF originales.</p>
+      <a id="download-link" class="save-zip" target="_blank" rel="noopener noreferrer">Guardar ZIP <span aria-hidden="true">↗</span></a>
+      <p class="download-help">Pulsa «Guardar ZIP». La descarga se abrirá en una pestaña nueva.</p>
+      <div class="download-actions"><button id="download-close" type="button" class="cancel-download">Cerrar</button></div>
+    </section>
+  </dialog>
+</body>
+</html>
